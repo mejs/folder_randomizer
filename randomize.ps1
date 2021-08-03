@@ -1,11 +1,7 @@
-#This reads the current directory and puts it into list.txt file
-ls -n -Attributes Directory >> list.txt
 #This will store the random names
 $randomNames = [System.Collections.ArrayList]@()
-#The file with the names
-$file = "list.txt"
-#The file is imported into an array
-$nameList = Get-Content $file
+#This reads the folders names
+$nameList = ls -n -Attributes Directory
 #A loop set to run twice.
 for($x=0;$x -lt 1;$x++){
     #Generates a random number within the size of the $nameList Array
@@ -15,7 +11,4 @@ for($x=0;$x -lt 1;$x++){
 }
 #Writes the names to the console
 Write-Host $randomNames
-#This opens the folder in explorer
 ii $randomNames
-#This deletes the temp text file
-rm list.txt
