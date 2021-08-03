@@ -2,7 +2,7 @@
 $randomNames = [System.Collections.ArrayList]@()
 #This reads the folders names
 $nameList = ls -n -Attributes Directory
-#A loop set to run twice.
+#A loop
 for($x=0;$x -lt 1;$x++){
     #Generates a random number within the size of the $nameList Array
     $randomNum = Get-Random -Minimum 1 -Maximum $nameList.Count
